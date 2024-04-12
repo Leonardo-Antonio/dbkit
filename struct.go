@@ -12,4 +12,14 @@ type (
 		ItemFound bool                     `json:"itemFound" xml:"itemFound"`
 		Items     []map[string]interface{} `json:"items" xml:"items"`
 	}
+
+	ArgsUpdate struct {
+		Columns []any
+		Where   []any
+	}
+
+	UpdateInfo struct {
+		Script string
+		Args   ArgsUpdate
+	}
 )
